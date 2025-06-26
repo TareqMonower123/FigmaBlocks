@@ -6,25 +6,19 @@
 }
 
 body {
-  margin: 0;
   font-family: "Rubik", sans-serif;
   background: #fbf8f4;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 1023px) {
-  body {
-    height: auto;
-  }
 }
 
 .wak-cta {
   height: auto;
   width: 100%;
-  max-width: 1600px;
-  height: auto;
+  max-width: 1360px;
+  min-height: 768px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 20px;
+  gap: 60px;
   width: 100%;
   height: 100%;
   background: #ffce03;
@@ -58,7 +52,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  width: 80%;
+  width: 70%;
   height: 100%;
   background: #ffce03;
   padding: 20px 0px;
@@ -69,19 +63,16 @@ body {
   }
 }
 .wak-cta-container-cta-headings-overline {
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 105%;
   font-family: "Rubik", sans-serif;
   color: #262626;
 }
-@media screen and (max-width: 1023px) {
-  .wak-cta-container-cta-headings-overline {
-    font-size: 1rem;
-  }
-}
 .wak-cta-container-cta-headings-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110%;
   color: #262626;
   text-align: left;
   font-family: "Rubik", sans-serif;
@@ -106,7 +97,7 @@ body {
   align-items: start;
   align-items: start;
   width: 100%;
-  height: 250px;
+  height: 288px;
   border: 2px solid rgba(237, 216, 132, 0.7960784314);
   padding: 20px 20px;
   -webkit-border-radius: 5px;
@@ -137,7 +128,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .wak-cta-container-cta-cards {
     grid-template-columns: 1fr;
   }
@@ -147,8 +138,8 @@ body {
   top: 0;
   right: 0;
   background-color: #fbf8f4;
-  width: 300px;
-  height: 300px;
+  width: 384px;
+  height: 288px;
   padding: 40px 30px;
   border-radius: 20px;
   display: flex;
@@ -188,8 +179,9 @@ body {
 .wak-cta-container-cta-button-text {
   color: #262626;
   font-family: "Rubik", sans-serif;
-  font-size: 2.5rem;
+  font-size: 48px;
   font-weight: 500;
+  line-height: 110%;
 }
 @media screen and (max-width: 1023px) {
   .wak-cta-container-cta-button {
