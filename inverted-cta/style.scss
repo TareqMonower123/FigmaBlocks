@@ -1,0 +1,245 @@
+/** @format */
+
+$PrimaryColor: #ffce03;
+$SecondaryColor: #262626;
+$WhiteColor: #fbf8f4;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f2f2f2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wak-work-together {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+
+  &-container {
+    background: $PrimaryColor;
+    width: 100%;
+    max-width: 1360px;
+    height: 100%;
+    max-height: 800px;
+
+    overflow: hidden;
+    @include border-radius(20px);
+
+    @media screen and (max-width: 1280px) {
+      width: 90%;
+    }
+
+    // img
+    &-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      // mobile text
+      &-mobile-text {
+        display: none;
+
+        @media screen and (max-width: 1280px) {
+          width: 95%;
+          display: block;
+          text-align: left;
+          padding: 1rem 0;
+          font-family: "Rubik", sans-serif;
+          font-weight: 300;
+          font-size: 1.5rem;
+          margin-top: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 90%;
+        }
+      }
+
+      img {
+        width: 95%;
+        max-width: 1360px;
+        height: 95%;
+        max-height: 700px;
+        @include border-radius(20px 20px);
+        object-fit: cover;
+
+        @media screen and (max-width: 1280px) {
+          margin-bottom: 3rem;
+        }
+        @media screen and (max-width: 768px) {
+          width: 90%;
+          margin-bottom: 2rem;
+        }
+      }
+
+      // logo box
+      &-logo-box {
+        position: absolute;
+        z-index: 10;
+        top: 50px;
+        left: 34px;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $PrimaryColor;
+        border-bottom: 10px solid $PrimaryColor;
+        border-right: 10px solid $PrimaryColor;
+        @include border-radius(0 0 1.125rem 0);
+
+        @media screen and (max-width: 1279px) {
+          display: none;
+        }
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1.5rem;
+          height: 1.5rem;
+          aspect-ratio: 1;
+          background: transparent;
+          border-top-left-radius: 20px;
+          box-shadow: -5px -5px 0 5px $PrimaryColor;
+        }
+
+        &::after {
+          top: 0px;
+          right: -34px;
+        }
+
+        &::before {
+          bottom: -34px;
+          left: 0px;
+        }
+
+        img {
+          width: 130px;
+          height: auto;
+        }
+      }
+
+      //cta button
+      &-cta-button {
+        position: absolute;
+        z-index: 10;
+        bottom: 50px;
+        right: 34px;
+        background-color: $PrimaryColor;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 30px;
+        border-top-left-radius: 20px;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1.5rem;
+          height: 1.5rem;
+          aspect-ratio: 1;
+          background: transparent;
+          border-bottom-right-radius: 20px;
+          box-shadow: 5px 5px 0px 5px $PrimaryColor;
+        }
+
+        &::after {
+          top: -24px;
+          right: 0px;
+        }
+
+        &::before {
+          bottom: 0px;
+          left: -24px;
+        }
+
+        @media screen and (max-width: 1279px) {
+          width: 100px;
+          height: 100px;
+          bottom: 20px;
+          right: 27px;
+        }
+
+        @media screen and (max-width: 1120px) {
+          bottom: 48px;
+          right: 16px;
+        }
+
+        @media screen and (max-width: 1023px) {
+          bottom: 30px;
+          right: 15px;
+        }
+
+        @media screen and (max-width: 991px) {
+          bottom: 30px;
+          right: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+          bottom: 31px;
+          right: 24px;
+        }
+
+        @media screen and (max-width: 575px) {
+          bottom: 30px;
+          right: 15px;
+        }
+
+        .wak-work-together {
+          &-arrow img {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            padding: 2px;
+            @include border-radius(50%);
+
+            @media screen and (max-width: 1280px) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          &-text {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-weight: 500;
+
+            @media screen and (max-width: 1280px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
