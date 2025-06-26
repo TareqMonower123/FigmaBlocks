@@ -1,0 +1,200 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background: #fbf8f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1023px) {
+  body {
+    height: auto;
+  }
+}
+
+.wak-cta {
+  height: auto;
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta {
+    margin: 50px 20px;
+  }
+}
+.wak-cta-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  background: #ffce03;
+  padding: 40px 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+}
+.wak-cta-container-cta-headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 80%;
+  height: 100%;
+  background: #ffce03;
+  padding: 20px 0px;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta-container-cta-headings {
+    width: 100%;
+  }
+}
+.wak-cta-container-cta-headings-overline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  color: #262626;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta-container-cta-headings-overline {
+    font-size: 1rem;
+  }
+}
+.wak-cta-container-cta-headings-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #262626;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta-container-cta-headings-title {
+    font-size: 2rem;
+  }
+}
+.wak-cta-container-cta-cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  margin: 30px 0px 0px 0px;
+}
+.wak-cta-container-cta-cards-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  align-items: start;
+  width: 100%;
+  height: 250px;
+  border: 2px solid rgba(237, 216, 132, 0.7960784314);
+  padding: 20px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.wak-cta-container-cta-cards-card-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #262626;
+  width: 100%;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta-container-cta-cards-card-text {
+    font-size: 1rem;
+  }
+}
+.wak-cta-container-cta-cards-card-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  width: 100%;
+  color: #262626;
+  text-align: right;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .wak-cta-container-cta-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.wak-cta-container-cta-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fbf8f4;
+  width: 300px;
+  height: 300px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.wak-cta-container-cta-button::after, .wak-cta-container-cta-button::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 15px -15px 0px 0px #fbf8f4;
+}
+.wak-cta-container-cta-button::after {
+  top: 0;
+  left: -32px;
+}
+.wak-cta-container-cta-button::before {
+  bottom: -32px;
+  right: 0;
+}
+.wak-cta-container-cta-button-arrow {
+  margin: 0;
+  padding: 0;
+}
+.wak-cta-container-cta-button-arrow img {
+  padding: 3px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #262626;
+}
+.wak-cta-container-cta-button-text {
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 1023px) {
+  .wak-cta-container-cta-button {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
