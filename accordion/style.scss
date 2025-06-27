@@ -1,0 +1,134 @@
+$primary-color: #ffce03;
+$secondary-color: #262626;
+$border-color: #e0e0e0;
+$icon-color: #ffcc00;
+$WhiteColor: #fbf8f4;
+$offwhite: #f2f2f2;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: $offwhite;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wak-accordion {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Roboto", sans-serif;
+    margin: 20px 20px;
+    background-color: $WhiteColor;
+    @include border-radius(20px);
+    padding: 80px 80px;
+
+    @media screen and (max-width: 767px) {
+      padding: 80px 24px;
+    }
+
+    &-heading {
+      width: 100%;
+
+      &-title {
+        font-size: 38px;
+        font-weight: 500;
+        color: $secondary-color;
+        line-height: 105%;
+        font-family: "Rubik", sans-serif;
+        font-style: normal;
+      }
+    }
+
+    &-container {
+      width: 100%;
+
+      &-item {
+        display: flex;
+        padding: 24px 0px;
+        border-top: 0.75px solid $border-color;
+        gap: 15px;
+
+        &-icons {
+          &-icon {
+            padding: 1px;
+            @include border-radius(50px);
+            background-color: $primary-color;
+            cursor: pointer;
+
+            i {
+              width: 20px;
+              height: 20px;
+              aspect-ratio: 1/1;
+            }
+
+            &-add {
+              display: inline-flex;
+            }
+
+            &-remove {
+              display: none;
+            }
+          }
+        }
+
+        &.active {
+          .wak-accordion-container-item-icons-icon-add {
+            display: none !important;
+          }
+
+          .wak-accordion-container-item-icons-icon-remove {
+            display: inline-flex !important;
+          }
+        }
+
+        &-content {
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          align-self: stretch;
+          flex-direction: column;
+          gap: 16px;
+
+          &-title {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 120%;
+            color: $secondary-color;
+            font-family: "Rubik", sans-serif;
+            cursor: pointer;
+          }
+
+          &-text {
+            font-size: 14px;
+            font-weight: 400;
+            color: $secondary-color;
+            font-family: "Rubik", sans-serif;
+            display: none;
+            line-height: 21px;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}

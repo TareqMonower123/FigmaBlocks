@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f2f2f2;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wak-accordion {
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px 20px;
+  background-color: #fbf8f4;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  padding: 80px 80px;
+}
+@media screen and (max-width: 767px) {
+  body .wak-accordion {
+    padding: 80px 24px;
+  }
+}
+body .wak-accordion-heading {
+  width: 100%;
+}
+body .wak-accordion-heading-title {
+  font-size: 38px;
+  font-weight: 500;
+  color: #262626;
+  line-height: 105%;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+}
+body .wak-accordion-container {
+  width: 100%;
+}
+body .wak-accordion-container-item {
+  display: flex;
+  padding: 24px 0px;
+  border-top: 0.75px solid #e0e0e0;
+  gap: 15px;
+}
+body .wak-accordion-container-item-icons-icon {
+  padding: 1px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #ffce03;
+  cursor: pointer;
+}
+body .wak-accordion-container-item-icons-icon i {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+}
+body .wak-accordion-container-item-icons-icon-add {
+  display: inline-flex;
+}
+body .wak-accordion-container-item-icons-icon-remove {
+  display: none;
+}
+body .wak-accordion-container-item.active .wak-accordion-container-item-icons-icon-add {
+  display: none !important;
+}
+body .wak-accordion-container-item.active .wak-accordion-container-item-icons-icon-remove {
+  display: inline-flex !important;
+}
+body .wak-accordion-container-item-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 16px;
+}
+body .wak-accordion-container-item-content-title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+body .wak-accordion-container-item-content-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  display: none;
+  line-height: 21px;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
