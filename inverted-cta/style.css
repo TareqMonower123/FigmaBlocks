@@ -32,6 +32,11 @@ body {
   -ms-border-radius: 20px;
   border-radius: 20px;
 }
+@media screen and (max-width: 1279px) {
+  .wak-work-together-container {
+    margin: 0 20px;
+  }
+}
 .wak-work-together-container-img {
   display: flex;
   flex-direction: column;
@@ -41,6 +46,11 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+}
+@media screen and (max-width: 1279px) {
+  .wak-work-together-container-img {
+    padding: 40px 20px;
+  }
 }
 .wak-work-together-container-img-mobile-text {
   display: none;
@@ -153,7 +163,7 @@ body {
     width: 150px;
     height: 150px;
     bottom: 0px;
-    right: 0px;
+    right: -20px;
   }
 }
 .wak-work-together-container-img-cta-button .wak-work-together-arrow img {
@@ -166,7 +176,7 @@ body {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .wak-work-together-container-img-cta-button .wak-work-together-arrow img {
     width: 40px;
     height: 40px;
@@ -180,7 +190,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .wak-work-together-container-img-cta-button .wak-work-together-text {
     display: none;
   }
