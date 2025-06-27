@@ -1,0 +1,348 @@
+$primary-color: #ffce03;
+$secondary-color: #262626;
+$WhiteColor: #fbf8f4;
+$offwhite: #f2f2f2;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: $offwhite;
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+
+  .wak-single-career {
+    width: 100%;
+    margin: 40px auto;
+    padding: 120px 80px 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 60px;
+      margin: 40px 20px;
+      padding: 60px 20px 0 20px;
+    }
+
+    &-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-overline {
+        font-size: 22px;
+        line-height: 110%;
+        color: $secondary-color;
+        font-weight: 500;
+      }
+      &-title {
+        font-size: 95px;
+        line-height: 100%;
+        color: $secondary-color;
+        font-weight: 500;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 50px;
+        }
+      }
+    }
+
+    &-content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+
+      &-sidebar {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+          width: 100%;
+        }
+
+        &-back {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          align-items: center;
+          margin-bottom: 40px;
+          cursor: pointer;
+          border: none;
+          gap: 4px;
+          background: transparent;
+          font-size: 14px;
+        }
+
+        &-info {
+          background: $WhiteColor;
+          padding: 40px 24px 24px 24px;
+          @include border-radius(20px);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 350px;
+
+          @media screen and (max-width: 1024px) {
+            width: 100%;
+          }
+
+          &-item {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            &-title {
+              font-size: 14px;
+              line-height: 110%;
+              color: $secondary-color;
+              font-weight: 700;
+            }
+            &-value {
+              font-size: 14px;
+              line-height: 110%;
+              color: $secondary-color;
+              font-weight: 200;
+            }
+          }
+
+          &-button {
+            border: none;
+            background: $primary-color;
+            color: $secondary-color;
+            font-family: "Rubik", sans-serif;
+            padding: 14px 24px;
+            @include border-radius(10px);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: $secondary-color;
+              color: $WhiteColor;
+              scale: 1.05;
+            }
+          }
+        }
+      }
+
+      &-summary {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        &-blocks {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          &-title {
+            font-size: 38px;
+            line-height: 110%;
+            color: $secondary-color;
+            font-weight: 500;
+            font-style: normal;
+          }
+
+          &-paragraph {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+          }
+
+          &-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+
+            &-item {
+              display: flex;
+              flex-direction: row;
+              gap: 20px;
+              align-items: start;
+
+              @media screen and (max-width: 1024px) {
+                gap: 10px;
+              }
+
+              i {
+                color: $secondary-color;
+                background-color: $primary-color;
+                padding: 3px;
+                @include border-radius(50%);
+                margin-right: 10px;
+                transform: translate(0px, 5px);
+              }
+              span {
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
+
+          &-button {
+            max-width: 200px;
+            border: none;
+            background: $primary-color;
+            color: $secondary-color;
+            font-family: "Rubik", sans-serif;
+            padding: 14px 24px;
+            @include border-radius(10px);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: $secondary-color;
+              color: $WhiteColor;
+              scale: 1.05;
+            }
+          }
+        }
+      }
+
+      &-bottom-sticky {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: $WhiteColor;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
+        @media screen and (min-width: 1024px) {
+          display: none;
+        }
+
+        &-line {
+          width: 30px;
+          height: 5px;
+          align-self: center;
+          background: $secondary-color;
+          @include border-radius(10px);
+          cursor: pointer;
+        }
+
+        &-title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          @include border-radius(10px);
+
+          p {
+            font-size: 22px;
+            line-height: 110%;
+            color: $secondary-color;
+            font-weight: 500;
+          }
+
+          button {
+            max-width: 200px;
+            border: none;
+            background: $primary-color;
+            color: $secondary-color;
+            font-family: "Rubik", sans-serif;
+            padding: 14px 24px;
+            @include border-radius(10px);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: $secondary-color;
+              color: $WhiteColor;
+              scale: 1.05;
+            }
+          }
+        }
+
+        &-content {
+          display: none;
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          margin: 20px 0px;
+          animation: fadeSlideIn 0.3s ease forwards;
+
+          @keyframes fadeSlideIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          &-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &-title {
+              font-size: 14px;
+              line-height: 110%;
+              color: $secondary-color;
+              font-weight: 700;
+            }
+            &-value {
+              font-size: 14px;
+              line-height: 110%;
+              color: $secondary-color;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
