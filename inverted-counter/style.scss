@@ -182,7 +182,7 @@ body {
         padding: 0;
 
         img {
-          padding: 3px;
+          padding: 4px;
           @include border-radius(50%);
           background-color: $SecondaryColor;
         }
