@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f2f2f2;
+  min-height: 100vh;
+}
+body .wak-single-career {
+  margin: 40px auto;
+  padding: 120px 80px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career {
+    gap: 60px;
+    margin: 40px 20px;
+    padding: 60px 20px 0 20px;
+  }
+}
+body .wak-single-career-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .wak-single-career-heading-overline {
+  font-size: 22px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 500;
+}
+body .wak-single-career-heading-title {
+  font-size: 95px;
+  line-height: 100%;
+  color: #262626;
+  font-weight: 500;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-heading-title {
+    font-size: 50px;
+  }
+}
+body .wak-single-career-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content {
+    flex-direction: column;
+  }
+}
+body .wak-single-career-content-sidebar {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content-sidebar {
+    display: none;
+  }
+}
+body .wak-single-career-content-sidebar-back {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+  border: none;
+  gap: 4px;
+  background: transparent;
+  font-size: 14px;
+}
+body .wak-single-career-content-sidebar-info {
+  background: #fbf8f4;
+  padding: 40px 24px 24px 24px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content-sidebar-info {
+    width: 100%;
+  }
+}
+body .wak-single-career-content-sidebar-info-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+body .wak-single-career-content-sidebar-info-item-title {
+  font-size: 14px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 700;
+}
+body .wak-single-career-content-sidebar-info-item-value {
+  font-size: 14px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 200;
+}
+body .wak-single-career-content-sidebar-info-button {
+  border: none;
+  background: #ffce03;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  padding: 14px 24px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+body .wak-single-career-content-sidebar-info-button:hover {
+  background: #262626;
+  color: #fbf8f4;
+  scale: 1.05;
+}
+body .wak-single-career-content-summary {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content-summary {
+    width: 100%;
+  }
+}
+body .wak-single-career-content-summary-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body .wak-single-career-content-summary-blocks-title {
+  font-size: 38px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 500;
+  font-style: normal;
+}
+body .wak-single-career-content-summary-blocks-paragraph {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+body .wak-single-career-content-summary-blocks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+body .wak-single-career-content-summary-blocks-list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: start;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content-summary-blocks-list-item {
+    gap: 10px;
+  }
+}
+body .wak-single-career-content-summary-blocks-list-item i {
+  color: #262626;
+  background-color: #ffce03;
+  padding: 3px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+  transform: translate(0px, 5px);
+}
+body .wak-single-career-content-summary-blocks-list-item span {
+  padding: 0;
+  margin: 0;
+}
+body .wak-single-career-content-summary-blocks-button {
+  max-width: 200px;
+  border: none;
+  background: #ffce03;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  padding: 14px 24px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+body .wak-single-career-content-summary-blocks-button:hover {
+  background: #262626;
+  color: #fbf8f4;
+  scale: 1.05;
+}
+body .wak-single-career-content-bottom-sticky {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fbf8f4;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-content-bottom-sticky {
+    display: flex;
+  }
+}
+body .wak-single-career-content-bottom-sticky-line {
+  width: 30px;
+  height: 5px;
+  align-self: center;
+  background: #262626;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body .wak-single-career-content-bottom-sticky-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+body .wak-single-career-content-bottom-sticky-title p {
+  font-size: 22px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 500;
+}
+body .wak-single-career-content-bottom-sticky-title button {
+  max-width: 200px;
+  border: none;
+  background: #ffce03;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  padding: 14px 24px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+body .wak-single-career-content-bottom-sticky-title button:hover {
+  background: #262626;
+  color: #fbf8f4;
+  scale: 1.05;
+}
+body .wak-single-career-content-bottom-sticky-content {
+  display: none;
+}
+body .wak-single-career-content-bottom-sticky-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0px;
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body .wak-single-career-content-bottom-sticky-info-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .wak-single-career-content-bottom-sticky-info-item-title {
+  font-size: 14px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 700;
+}
+body .wak-single-career-content-bottom-sticky-info-item-value {
+  font-size: 14px;
+  line-height: 110%;
+  color: #262626;
+  font-weight: 200;
+}
+body .wak-single-career-apply {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 120px 80px;
+  background: #262626;
+  gap: 80px;
+  align-items: flex-start;
+  color: #fbf8f4;
+}
+@media screen and (max-width: 1024px) {
+  body .wak-single-career-apply {
+    flex-direction: column;
+    padding: 96px 24px;
+    gap: 64px;
+    margin-bottom: 50px;
+  }
+}
+body .wak-single-career-apply-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-apply-content {
+    width: 100%;
+  }
+}
+body .wak-single-career-apply-content-title {
+  font-size: 72px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  body .wak-single-career-apply-content-title {
+    font-size: 48px;
+  }
+}
+body .wak-single-career-apply-content-title span {
+  color: #ffce03;
+}
+body .wak-single-career-apply-content-paragraph {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 140%;
+}
+body .wak-single-career-apply-content-note {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  width: 384px;
+  padding: 12px 16px 12px 12px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #fffae8;
+}
+@media screen and (max-width: 1024px) {
+  body .wak-single-career-apply-content-note {
+    width: 100%;
+  }
+}
+body .wak-single-career-apply-content-note i {
+  color: #ffce03;
+}
+body .wak-single-career-apply-content-note p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 14px;
+  color: #262626;
+}
+body .wak-single-career-apply-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (max-width: 1023px) {
+  body .wak-single-career-apply-form {
+    width: 100%;
+  }
+}
+body .wak-single-career-apply-form-name, body .wak-single-career-apply-form-email, body .wak-single-career-apply-form-phone, body .wak-single-career-apply-form-file {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body .wak-single-career-apply-form-name label, body .wak-single-career-apply-form-email label, body .wak-single-career-apply-form-phone label, body .wak-single-career-apply-form-file label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #fbf8f4;
+}
+body .wak-single-career-apply-form-name input, body .wak-single-career-apply-form-email input, body .wak-single-career-apply-form-phone input, body .wak-single-career-apply-form-file input {
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3333333333);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+}
+body .wak-single-career-apply-form-file {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+  justify-content: center;
+  min-height: 112px;
+  width: 100%;
+  position: relative;
+}
+body .wak-single-career-apply-form-file p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 140%;
+  color: #fbf8f4;
+}
+body .wak-single-career-apply-form-file-input {
+  min-height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3333333333);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+body .wak-single-career-apply-form-file-input input {
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+body .wak-single-career-apply-form-file-input-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+body .wak-single-career-apply-form-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+body .wak-single-career-apply-form-checkbox input {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3333333333);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent !important;
+}
+body .wak-single-career-apply-form-checkbox label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #fbf8f4;
+}
+body .wak-single-career-apply-form-checkbox label a {
+  color: #fbf8f4;
+  text-decoration: none;
+}
+body .wak-single-career-apply-form-button {
+  width: 100%;
+  border: none;
+  background: #ffce03;
+  color: #262626;
+  font-family: "Rubik", sans-serif;
+  padding: 12px 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+body .wak-single-career-apply-form-button:hover {
+  background: #fbf8f4;
+  color: #262626;
+}
+
+/*# sourceMappingURL=style.css.map */
