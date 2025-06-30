@@ -10,6 +10,17 @@ $offwhite: #f2f2f2;
   border-radius: $radius;
 }
 
+$devices: (
+  "md": 767px,
+  "lg": 1023px,
+);
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +40,7 @@ body {
     gap: 120px;
     overflow-x: hidden;
 
-    @media screen and (max-width: 1024px) {
+    @include media-query(map-get($devices, "lg")) {
       gap: 60px;
       margin: 40px 20px;
       padding: 60px 20px 0 20px;
@@ -51,7 +62,7 @@ body {
         color: $secondary-color;
         font-weight: 500;
 
-        @media screen and (max-width: 1024px) {
+        @include media-query(map-get($devices, "lg")) {
           font-size: 50px;
         }
       }
@@ -63,7 +74,7 @@ body {
       flex-direction: row;
       gap: 80px;
 
-      @media screen and (max-width: 1024px) {
+      @include media-query(map-get($devices, "lg")) {
         flex-direction: column;
       }
 
@@ -74,9 +85,8 @@ body {
         gap: 24px;
         align-items: flex-start;
 
-        @media screen and (max-width: 1024px) {
+        @include media-query(map-get($devices, "lg")) {
           display: none;
-          width: 100%;
         }
 
         &-back {
@@ -101,7 +111,7 @@ body {
           gap: 20px;
           width: 350px;
 
-          @media screen and (max-width: 1024px) {
+          @include media-query(map-get($devices, "lg")) {
             width: 100%;
           }
 
@@ -152,7 +162,7 @@ body {
         flex-direction: column;
         gap: 64px;
 
-        @media screen and (max-width: 1024px) {
+        @include media-query(map-get($devices, "lg")) {
           width: 100%;
         }
 
@@ -191,7 +201,7 @@ body {
               gap: 20px;
               align-items: start;
 
-              @media screen and (max-width: 1024px) {
+              @include media-query(map-get($devices, "lg")) {
                 gap: 10px;
               }
 
@@ -238,14 +248,17 @@ body {
         left: 0;
         bottom: 0;
         background: $WhiteColor;
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 10px;
         padding: 20px;
+
         box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
-        @media screen and (min-width: 1024px) {
-          display: none;
+
+        @include media-query(map-get($devices, "lg")) {
+          display: flex;
         }
+
         z-index: 100;
 
         &-line {
@@ -360,13 +373,17 @@ body {
         gap: 24px;
         align-items: flex-start;
 
-        @media screen and (max-width: 1024px) {
+        @include media-query(map-get($devices, "lg")) {
           width: 100%;
         }
 
         &-title {
           font-size: 72px;
           font-weight: 500;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 48px;
+          }
 
           span {
             color: $primary-color;
@@ -398,7 +415,7 @@ body {
           }
 
           p {
-            font-size: "Rubik", sans-serif;
+            font-family: "Rubik", sans-serif;
             font-weight: 500;
             line-height: 120%;
             font-size: 14px;
@@ -413,7 +430,7 @@ body {
         flex-direction: column;
         gap: 24px;
 
-        @media screen and (max-width: 1024px) {
+        @include media-query(map-get($devices, "lg")) {
           width: 100%;
         }
 

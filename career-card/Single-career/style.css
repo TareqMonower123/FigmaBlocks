@@ -17,7 +17,7 @@ body .wak-single-career {
   gap: 120px;
   overflow-x: hidden;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career {
     gap: 60px;
     margin: 40px 20px;
@@ -41,7 +41,7 @@ body .wak-single-career-heading-title {
   color: #262626;
   font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-heading-title {
     font-size: 50px;
   }
@@ -52,7 +52,7 @@ body .wak-single-career-content {
   flex-direction: row;
   gap: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content {
     flex-direction: column;
   }
@@ -64,10 +64,9 @@ body .wak-single-career-content-sidebar {
   gap: 24px;
   align-items: flex-start;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content-sidebar {
     display: none;
-    width: 100%;
   }
 }
 body .wak-single-career-content-sidebar-back {
@@ -94,7 +93,7 @@ body .wak-single-career-content-sidebar-info {
   gap: 20px;
   width: 350px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content-sidebar-info {
     width: 100%;
   }
@@ -144,7 +143,7 @@ body .wak-single-career-content-summary {
   flex-direction: column;
   gap: 64px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content-summary {
     width: 100%;
   }
@@ -182,7 +181,7 @@ body .wak-single-career-content-summary-blocks-list-item {
   gap: 20px;
   align-items: start;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content-summary-blocks-list-item {
     gap: 10px;
   }
@@ -229,16 +228,16 @@ body .wak-single-career-content-bottom-sticky {
   left: 0;
   bottom: 0;
   background: #fbf8f4;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-content-bottom-sticky {
-    display: none;
+    display: flex;
   }
 }
 body .wak-single-career-content-bottom-sticky-line {
@@ -352,7 +351,7 @@ body .wak-single-career-apply-content {
   gap: 24px;
   align-items: flex-start;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-apply-content {
     width: 100%;
   }
@@ -360,6 +359,11 @@ body .wak-single-career-apply-content {
 body .wak-single-career-apply-content-title {
   font-size: 72px;
   font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  body .wak-single-career-apply-content-title {
+    font-size: 48px;
+  }
 }
 body .wak-single-career-apply-content-title span {
   color: #ffce03;
@@ -391,7 +395,7 @@ body .wak-single-career-apply-content-note i {
   color: #ffce03;
 }
 body .wak-single-career-apply-content-note p {
-  font-size: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   line-height: 120%;
   font-size: 14px;
@@ -403,7 +407,7 @@ body .wak-single-career-apply-form {
   flex-direction: column;
   gap: 24px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body .wak-single-career-apply-form {
     width: 100%;
   }
