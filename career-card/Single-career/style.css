@@ -326,13 +326,15 @@ body .wak-single-career-content-bottom-sticky-info-item-value {
   color: #262626;
   font-weight: 200;
 }
-
-.d-flex {
+body .wak-single-career-apply {
   display: flex;
-}
-
-.d-none {
-  display: none;
+  flex-direction: row;
+  width: 100%;
+  padding: 120px 80px;
+  background: #262626;
+  gap: 80px;
+  align-items: flex-start;
+  color: #fbf8f4;
 }
 
 /*# sourceMappingURL=style.css.map */

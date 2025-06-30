@@ -334,13 +334,16 @@ body {
         }
       }
     }
+
+    &-apply {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 120px 80px;
+      background: $secondary-color;
+      gap: 80px;
+      align-items: flex-start;
+      color: $WhiteColor;
+    }
   }
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-none {
-  display: none;
 }
