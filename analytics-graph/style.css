@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f2f2f2;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wak-analytics-graph {
+  width: 100%;
+  max-width: 1280px;
+  height: 705px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffce03;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+body .wak-analytics-graph-white-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #fbf8f4;
+  z-index: 10;
+  max-width: 460px;
+  width: 100%;
+  max-height: 280px;
+  height: 100%;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+}
+body .wak-analytics-graph-white-box-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #262626;
+  line-height: 110%;
+}
+body .wak-analytics-graph-white-box::after, body .wak-analytics-graph-white-box::before {
+  content: "";
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 20px;
+  box-shadow: -23px -10px 0px 10px #fbf8f4;
+}
+body .wak-analytics-graph-white-box::after {
+  top: 0;
+  right: -30px;
+}
+body .wak-analytics-graph-white-box::before {
+  bottom: -30px;
+  left: 0;
+}
+body .wak-analytics-graph-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+body .wak-analytics-graph-content-left {
+  max-width: 460px;
+  min-height: 424px;
+  height: auto;
+  align-self: flex-end;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .wak-analytics-graph-content-left-title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 140%;
+  font-family: "Rubik", sans-serif;
+}
+body .wak-analytics-graph-content-left-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .wak-analytics-graph-content-left-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background-color: #fbf8f4;
+  padding: 8px 16px 8px 8px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  width: fit-content;
+  max-width: 100%;
+}
+body .wak-analytics-graph-content-left-list-item i {
+  background-color: #262626;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  padding: 3px;
+  color: #fbf8f4;
+}
+body .wak-analytics-graph-content-left-list-item-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
+body .wak-analytics-graph-content-right {
+  width: 100%;
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+}
+body .wak-analytics-graph-content-right-overline {
+  font-size: 16px;
+  line-height: 110%;
+  font-weight: 500;
+  color: #675921;
+}
+body .wak-analytics-graph-content-right-title {
+  font-size: 30px;
+  line-height: 110%;
+  font-weight: 500;
+}
+body .wak-analytics-graph-content-right-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+body .wak-analytics-graph-content-right-cards-card {
+  padding-left: 16px;
+  border-left: 4px solid #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+body .wak-analytics-graph-content-right-cards-card-number {
+  font-size: 30px;
+  font-weight: 400;
+}
+body .wak-analytics-graph-content-right-cards-card-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/*# sourceMappingURL=style.css.map */

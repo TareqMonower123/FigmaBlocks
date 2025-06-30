@@ -1,0 +1,194 @@
+$primary-color: #ffce03;
+$secondary-color: #262626;
+$border-color: #e0e0e0;
+$light-color: #675921;
+$WhiteColor: #fbf8f4;
+$offwhite: #f2f2f2;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: $offwhite;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wak-analytics-graph {
+    width: 100%;
+    max-width: 1280px;
+    height: 705px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    @include border-radius(20px);
+    position: relative;
+
+    &-white-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include border-radius(20px);
+      background-color: $WhiteColor;
+      z-index: 10;
+      max-width: 460px;
+      width: 100%;
+      max-height: 280px;
+      height: 100%;
+      padding: 0px 40px;
+      display: flex;
+      align-items: center;
+
+      &-title {
+        font-size: 30px;
+        font-weight: 500;
+        color: $secondary-color;
+        line-height: 110%;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        border-top-left-radius: 20px;
+        box-shadow: -23px -10px 0px 10px $WhiteColor;
+      }
+
+      &::after {
+        top: 0;
+        right: -30px;
+      }
+
+      &::before {
+        bottom: -30px;
+        left: 0;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      &-left {
+        max-width: 460px;
+        min-height: 424px;
+        height: auto;
+        align-self: flex-end;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-title {
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 140%;
+          font-family: "Rubik", sans-serif;
+        }
+
+        &-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          &-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+            background-color: $WhiteColor;
+            padding: 8px 16px 8px 8px;
+            @include border-radius(50px);
+            width: fit-content;
+            max-width: 100%;
+
+            i {
+              background-color: $secondary-color;
+              @include border-radius(50%);
+              padding: 3px;
+              color: $WhiteColor;
+            }
+
+            &-text {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 120%;
+            }
+          }
+        }
+      }
+
+      &-right {
+        width: 100%;
+        padding: 0px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 24px;
+
+        &-overline {
+          font-size: 16px;
+          line-height: 110%;
+          font-weight: 500;
+          color: $light-color;
+        }
+
+        &-title {
+          font-size: 30px;
+          line-height: 110%;
+          font-weight: 500;
+        }
+
+        &-cards {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          width: 100%;
+
+          &-card {
+            padding-left: 16px;
+            border-left: 4px solid $secondary-color;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: start;
+
+            &-number {
+              font-size: 30px;
+              font-weight: 400;
+            }
+
+            &-text {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 120%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
