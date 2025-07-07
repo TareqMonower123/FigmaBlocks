@@ -1,16 +1,3 @@
-$primary-color: #ffce03;
-$secondary-color: #262626;
-$border-color: #e0e0e0;
-$icon-color: #ffcc00;
-$WhiteColor: #fbf8f4;
-$offwhite: #f2f2f2;
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
 
 * {
   margin: 0;
@@ -20,7 +7,7 @@ $offwhite: #f2f2f2;
 
 body {
   font-family: "Rubik", sans-serif;
-  background: $offwhite;
+  background: #f2f2f2;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -37,8 +24,8 @@ body {
     gap: 40px;
     font-family: "Roboto", sans-serif;
     margin: 20px 20px;
-    background-color: $WhiteColor;
-    @include border-radius(20px);
+    background-color: #fbf8f4;
+    border-radius: 20px;
     padding: 80px 80px;
 
     @media screen and (max-width: 767px) {
@@ -51,7 +38,7 @@ body {
       &-title {
         font-size: 38px;
         font-weight: 500;
-        color: $secondary-color;
+        color: #262626;
         line-height: 105%;
         font-family: "Rubik", sans-serif;
         font-style: normal;
@@ -64,14 +51,14 @@ body {
       &-item {
         display: flex;
         padding: 24px 0px;
-        border-top: 0.75px solid $border-color;
+        border-top: 0.75px solid #e0e0e0;
         gap: 15px;
 
         &-icons {
           &-icon {
             padding: 1px;
-            @include border-radius(50px);
-            background-color: $primary-color;
+            border-radius: 50px;
+            background-color: #ffce03;
             cursor: pointer;
 
             i {
@@ -113,7 +100,7 @@ body {
             font-size: 18px;
             font-weight: 700;
             line-height: 120%;
-            color: $secondary-color;
+            color: #262626;
             font-family: "Rubik", sans-serif;
             cursor: pointer;
           }
@@ -121,7 +108,7 @@ body {
           &-text {
             font-size: 14px;
             font-weight: 400;
-            color: $secondary-color;
+            color: #262626;
             font-family: "Rubik", sans-serif;
             display: none;
             line-height: 21px;
