@@ -24,9 +24,6 @@ body .wak-accordion {
   font-family: "Roboto", sans-serif;
   margin: 20px 20px;
   background-color: #fbf8f4;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
   border-radius: 20px;
   padding: 80px 80px;
 }
@@ -51,35 +48,27 @@ body .wak-accordion-container {
 }
 body .wak-accordion-container-item {
   display: flex;
+  flex-direction: column;
   padding: 24px 0px;
   border-top: 0.75px solid #e0e0e0;
   gap: 15px;
 }
+body .wak-accordion-container-item-icons-container {
+  display: flex;
+  gap: 16px;
+}
 body .wak-accordion-container-item-icons-icon {
   padding: 1px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
   border-radius: 50px;
   background-color: #ffce03;
   cursor: pointer;
-}
-body .wak-accordion-container-item-icons-icon i {
-  width: 20px;
-  height: 20px;
-  aspect-ratio: 1/1;
+  font-size: 20px;
 }
 body .wak-accordion-container-item-icons-icon-add {
   display: inline-flex;
 }
 body .wak-accordion-container-item-icons-icon-remove {
   display: none;
-}
-body .wak-accordion-container-item.active .wak-accordion-container-item-icons-icon-add {
-  display: none !important;
-}
-body .wak-accordion-container-item.active .wak-accordion-container-item-icons-icon-remove {
-  display: inline-flex !important;
 }
 body .wak-accordion-container-item-content {
   width: 100%;
@@ -103,9 +92,9 @@ body .wak-accordion-container-item-content-text {
   font-weight: 400;
   color: #262626;
   font-family: "Rubik", sans-serif;
-  display: none;
   line-height: 21px;
   font-style: normal;
+  padding-left: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */
