@@ -34,7 +34,7 @@ body {
     gap: var(--Spacing-spacing-xxl, 80px);
   }
 }
-.wak-apply-now-content {
+.wak-apply-now .wak-apply-now-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,11 +42,11 @@ body {
   align-self: stretch;
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-content {
+  .wak-apply-now .wak-apply-now-content {
     flex: 1 0 0;
   }
 }
-.wak-apply-now-content-title {
+.wak-apply-now .wak-apply-now-content-title {
   color: var(--Text-text-primary, #fff);
   /* Display/Display H2 */
   font-size: var(--Sizes-display-h2, 48px);
@@ -55,11 +55,11 @@ body {
   line-height: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-content-title {
+  .wak-apply-now .wak-apply-now-content-title {
     font-size: var(--Sizes-display-h2, 72px);
   }
 }
-.wak-apply-now-content-title-highlight {
+.wak-apply-now .wak-apply-now-content-title-highlight {
   color: var(--Text-text-highlight, #ffce03);
   /* Display/Display H2 */
   font-size: var(--Sizes-display-h2, 48px);
@@ -68,11 +68,11 @@ body {
   line-height: 100%; /* 48px */
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-content-title-highlight {
+  .wak-apply-now .wak-apply-now-content-title-highlight {
     font-size: var(--Sizes-display-h2, 72px);
   }
 }
-.wak-apply-now-content-description {
+.wak-apply-now .wak-apply-now-content-description {
   color: #fff;
   align-self: stretch;
   /* Body/Large */
@@ -82,11 +82,11 @@ body {
   line-height: 140%; /* 33.6px */
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-content-description {
+  .wak-apply-now .wak-apply-now-content-description {
     font-size: var(--Sizes-Large, 32px);
   }
 }
-.wak-apply-now-content-note {
+.wak-apply-now .wak-apply-now-content-note {
   display: flex;
   padding: 12px var(--Spacing-spacing-sm, 16px) 12px 12px;
   align-items: flex-start;
@@ -97,16 +97,16 @@ body {
   background: var(--Validation-warning-bg, #fffae8);
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-content-note {
+  .wak-apply-now .wak-apply-now-content-note {
     width: 384px;
   }
 }
-.wak-apply-now-content-note img {
+.wak-apply-now .wak-apply-now-content-note img {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
-.wak-apply-now-content-note-text {
+.wak-apply-now .wak-apply-now-content-note-text {
   color: var(--Text-text-primary, #262626);
   /* UI/Small */
   font-size: var(--Sizes-Small, 14px);
@@ -114,136 +114,13 @@ body {
   font-weight: 400;
   line-height: 120%; /* 16.8px */
 }
-.wak-apply-now-form {
+.wak-apply-now .wak-apply-now-form {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .wak-apply-now-form {
+  .wak-apply-now .wak-apply-now-form {
     flex: 1 0 0;
   }
-}
-.wak-apply-now-form form {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--Spacing-spacing-sm, 16px);
-  align-self: stretch;
-}
-.wak-apply-now-form-field {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--Spacing-spacing-xxxs, 4px);
-  align-self: stretch;
-  border-radius: 8px;
-}
-.wak-apply-now-form-field label {
-  color: var(--Text-text-primary, #fff);
-  /* UI/Small bold */
-  font-size: var(--Sizes-Small, 14px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 16.8px */
-}
-.wak-apply-now-form-field input {
-  width: 100%;
-  display: flex;
-  height: 41px;
-  min-height: 41px;
-  padding: var(--Field-field-top-bottom, 12px) var(--Field-field-sides, 16px);
-  align-items: flex-start;
-  gap: var(--Spacing-spacing-xxs, 8px);
-  align-self: stretch;
-  border-radius: var(--Field-field-radius, 8px);
-  border: 1px solid var(--Form-Field-field-border, #3b3b3b);
-  background: var(--Form-Field-field-bg, #313131);
-  color: var(--Text-text-secondary, #a8a8a8);
-  /* UI/Small */
-  font-size: var(--Sizes-Small, 14px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 16.8px */
-}
-.wak-apply-now-form-field input:focus {
-  border: 1px solid var(--Form-Field-field-border, #3b3b3b);
-  background: var(--Form-Field-field-focus-bg, #262626);
-}
-.wak-apply-now-form-file-text {
-  color: var(--Text-text-secondary, #a8a8a8);
-  /* UI/Extra small */
-  font-size: var(--Sizes-Extra-small, 11px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%; /* 12.1px */
-}
-.wak-apply-now-form-file-upload {
-  display: flex;
-  height: 112px;
-  min-height: 112px;
-  padding: var(--Padding-top-bottom, 12px) var(--Padding-sides, 16px);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--Spacing-spacing-xxxs, 4px);
-  align-self: stretch;
-  border-radius: var(--Field-field-radius, 8px);
-  border: 1px dashed var(--Form-Field-field-border, #3b3b3b);
-  background: var(--Form-Field-field-bg, #313131);
-  position: relative;
-}
-.wak-apply-now-form-file-upload input {
-  opacity: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-}
-.wak-apply-now-form-file-upload img {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-}
-.wak-apply-now-form-file-upload-subtext {
-  color: var(--Text-text-secondary, #a8a8a8);
-  text-align: center;
-  /* UI/Extra small */
-  font-size: var(--Sizes-Extra-small, 11px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%; /* 12.1px */
-}
-.wak-apply-now-form-file-upload-text {
-  color: var(--Text-text-primary, #fff);
-  /* Links/Small */
-  font-size: var(--Sizes-Small, 14px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%; /* 16.8px */
-}
-.wak-apply-now-form-checkbox {
-  display: flex;
-  flex-direction: row;
-  align-items: center !important;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-self: stretch;
-  width: 100%;
-}
-.wak-apply-now-form-checkbox input {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  border: 1px solid var(--form-checkboxes-radio-buttons-inactive-stroke, #676767);
-  background: transparent;
-}
-.wak-apply-now-form-checkbox-text {
-  color: var(--Text-text-primary, #fff);
-  /* UI/Small */
-  font-size: var(--Sizes-Small, 14px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 16.8px */
 }
 
 /*# sourceMappingURL=style.css.map */
