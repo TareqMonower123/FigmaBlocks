@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: auto;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+  background: var(--Canvas-canvas-primary, #dadada);
+}
+
+.container {
+  display: flex;
+  padding: 0px var(--Padding-sides-xl-default, 24px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-blocks, 96px);
+  align-self: stretch;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    padding: 0px var(--Padding-sides-xl-default, 80px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-spacing-blocks, 120px);
+    align-self: stretch;
+  }
+}
+.container .wak-locations {
+  display: flex;
+  flex-direction: column;
+  min-width: 345px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-lg, 40px);
+  align-self: stretch;
+}
+@media screen and (min-width: 1024px) {
+  .container .wak-locations {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.container .wak-locations-title {
+  color: var(--Text-text-primary, #262626);
+  /* Display/Display H3 */
+  font-size: var(--Sizes-display-h3, 56px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 56px */
+}
+.container .wak-locations-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-lg, 40px);
+  align-self: stretch;
+}
+@media screen and (min-width: 1024px) {
+  .container .wak-locations-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.container .wak-locations-card {
+  width: 100%;
+  display: flex;
+  height: 360px;
+  padding: var(--Spacing-spacing-lg, 40px) var(--Padding-sides-lg, 24px);
+  align-items: flex-end;
+  gap: var(--Spacing-spacing-lg, 40px);
+  align-self: stretch;
+  border-radius: var(--Radius-radius-default, 20px);
+}
+.container .wak-locations-card.active {
+  height: 520px;
+}
+.container .wak-locations-card .wak-locations-card-tag {
+  display: none;
+}
+.container .wak-locations-card.no-location {
+  position: relative;
+}
+.container .wak-locations-card.no-location .wak-locations-card-tag {
+  display: block;
+  transform: rotate(-90deg);
+  padding: 8px 16px;
+  border-radius: var(--Radius-radius-circle, 100px);
+  background: var(--Gradient, linear-gradient(247deg, var(--Gradient-Start, #ffeb9a) 14.99%, var(--Gradient-End, #dff2f1) 99.82%));
+  position: absolute;
+  bottom: 85px;
+  left: 35px;
+}
+.container .wak-locations-card.no-location .wak-locations-card-content {
+  display: none;
+}
+.container .wak-locations-card-title {
+  color: var(--Text-text-primary, #fff);
+  /* Display/Display H3 */
+  font-size: var(--Sizes-display-h3, 40px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 40px */
+  writing-mode: vertical-lr;
+  rotate: 180deg;
+  word-wrap: break-word;
+  height: 100%;
+}
+.container .wak-locations-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.container .wak-locations-card-content-location {
+  color: var(--Text-text-primary, #fff);
+  /* Headings/H4 */
+  font-size: var(--Sizes-h4, 30px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 33px */
+}
+.container .wak-locations-card-content-address {
+  color: var(--Text-text-primary, #fff);
+  /* UI/Standard */
+  font-size: var(--Sizes-Standard, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+}
+
+/*# sourceMappingURL=style.css.map */
