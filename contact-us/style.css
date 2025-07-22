@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px 0px;
-  background: var(--Canvas-canvas-primary, #dadada);
+  background: var(--Canvas-canvas-primary, #ffffff);
 }
 
 .container {
@@ -35,174 +35,115 @@ body {
     align-self: stretch;
   }
 }
-.container .wak-locations {
+.container .wak-contact-us-form {
   display: flex;
   flex-direction: column;
-  min-width: 345px;
-  justify-content: center;
   align-items: flex-start;
-  gap: var(--spacing-spacing-lg, 40px);
-  align-self: stretch;
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .container .wak-locations {
-    max-width: 1240px;
-  }
-}
-.container .wak-locations-title {
-  color: var(--text-text-primary, #fff);
-}
-.container .wak-locations-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: var(--spacing-spacing-xxs, 8px);
+  gap: var(--Spacing-spacing-blocks, 96px);
   align-self: stretch;
 }
 @media screen and (min-width: 1024px) {
-  .container .wak-locations-cards {
+  .container .wak-contact-us-form {
+    max-width: 1280px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: var(--spacing-spacing-xxs, 8px);
-    width: 100%;
-    overflow: hidden;
-  }
-}
-.container .wak-locations-card {
-  width: 100%;
-  height: 360px;
-  border-radius: var(--radius-radius-default, 20px);
-  position: relative;
-}
-@media screen and (min-width: 1024px) {
-  .container .wak-locations-card {
-    height: 100%;
-    max-height: 592px;
-  }
-  .container .wak-locations-card .wak-locations-card-wrapper-content {
-    display: none;
-  }
-}
-.container .wak-locations-card-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.container .wak-locations-card-bg img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius-radius-default, 20px);
-}
-.container .wak-locations-card-wrapper {
-  position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-  z-index: 1;
-  background-size: cover;
-  min-height: 360px;
-  height: 100%;
-  width: 100%;
-  border-radius: var(--radius-radius-default, 20px);
-  display: flex;
-  padding: var(--ppacing-spacing-lg, 40px) var(--padding-sides-lg, 24px);
-  align-items: flex-end;
-  gap: var(--spacing-spacing-lg, 40px);
-  align-self: stretch;
-  justify-content: space-between;
-}
-@media screen and (min-width: 1024px) {
-  .container .wak-locations-card-wrapper {
-    flex: 1;
-    height: 100%;
-    max-height: 592px;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: flex-start;
-    border-radius: 20px;
-    padding: 40px 24px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-    position: relative;
+    gap: var(--Spacing-spacing-xxl, 80px);
+    align-self: stretch;
   }
 }
-.container .wak-locations-card-wrapper-title {
-  color: var(--text-text-primary, #fff);
-  writing-mode: vertical-lr;
-  rotate: 180deg;
-  word-wrap: break-word;
-  height: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .container .wak-locations-card-wrapper-title {
-    color: var(--text-text-primary, #fff);
-    font-size: 40px;
-    font-weight: 500;
-    writing-mode: vertical-lr;
-    rotate: 180deg;
-    height: 100%;
-  }
-}
-.container .wak-locations-card-wrapper-tag {
-  display: none;
-}
-.container .wak-locations-card-wrapper-content {
-  display: none;
+.container .wak-contact-us-form-content {
+  display: flex;
+  max-width: 400px;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--Spacing-spacing-md, 24px);
   align-self: stretch;
-  color: var(--text-text-primary, #fff);
 }
 @media screen and (min-width: 1024px) {
-  .container .wak-locations-card-wrapper-content {
+  .container .wak-contact-us-form-content {
     display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-spacing-md, 24px);
+    flex: 1 0 0;
   }
 }
-.container .wak-locations-card.active {
-  height: 520px;
-  transition: height 0.4s ease;
+.container .wak-contact-us-form-content-text {
+  color: var(--Text-text-primary, #262626);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body/Large */
+  font-size: var(--Sizes-Large, 24px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 33.6px */
 }
-@media screen and (min-width: 1024px) {
-  .container .wak-locations-card.active {
-    flex: 0 0 632px;
-    height: 592px;
-    transition: flex 0.4s ease;
-  }
-}
-.container .wak-locations-card.active .wak-locations-card-wrapper-content {
+.container .wak-contact-us-form-content-list {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
-  gap: 8px;
-  width: 230px;
+  gap: var(--Spacing-spacing-xxs, 8px);
+  align-self: stretch;
 }
-.container .wak-locations-card.active.no-location .wak-locations-card-wrapper-tag {
-  display: block;
+.container .wak-contact-us-form-content-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-spacing-xxs, 8px);
 }
-.container .wak-locations-card.no-location {
-  position: relative;
+.container .wak-contact-us-form-content-list-item img {
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1/1;
 }
-.container .wak-locations-card.no-location .wak-locations-card-wrapper-tag {
-  display: none;
-  transform: rotate(-90deg);
-  position: absolute;
-  bottom: 85px;
-  left: 35px;
+.container .wak-contact-us-form-content-list-item span {
+  color: var(--Text-text-primary, #262626);
+  /* UI/Standard */
+  font-size: var(--Sizes-Standard, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
 }
-.container .wak-locations-card.no-location .wak-locations-card-wrapper-content {
-  display: none;
+.container .wak-contact-us-form-content-note {
+  display: flex;
+  padding: 12px var(--Spacing-spacing-sm, 16px) 12px 12px;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-xxs, 8px);
+  align-self: stretch;
+  border-radius: var(--blocks, 8px);
+  border: var(--stroke-md, 1px) solid var(--Validation-warning-stroke, #fff0b9);
+  background: var(--Validation-warning-bg, #fffae8);
+}
+.container .wak-contact-us-form-content-note img {
+  width: 24px;
+  height: 24px;
+}
+.container .wak-contact-us-form-content-note-text {
+  color: var(--Text-text-primary, #262626);
+  /* UI/Small */
+  font-size: var(--Sizes-Small, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+.container .wak-contact-us-form-wrapper {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+@media screen and (min-width: 1024px) {
+  .container .wak-contact-us-form-wrapper {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
