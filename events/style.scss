@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f2f2f2;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.wak-events {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 375px;
+  padding: 0 var(--Padding-sides-lg-default, 16px);
+  gap: var(--Spacing-spacing-xl, 40px);
+
+  @media screen and (min-width: 1080px) {
+    padding: 0 var(--Padding-sides-lg-default, 80px);
+    max-width: 1440px;
+  }
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: var(--Padding-top-bottom-xs, 16px);
+    border-bottom: 1px solid var(--Divider-divider-alt, #e6007e);
+
+    &-title {
+      color: var(--Text-text-primary, #0d1311);
+
+      /* Headings/H2 Mobile */
+      font-family: var(--Family-heading, Roboto);
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    &-button {
+      text-decoration: none;
+      padding: var(--Buttons-large-top-bottom, 16px) var(--Buttons-large-sides, 24px);
+      background: var(--Buttons-Primary-btn-bg-default, #e6007e);
+      color: var(--Buttons-Primary-btn-text-default, #fff);
+
+      /* Buttons/Large */
+      font-family: var(--Family-btn, Roboto);
+      font-size: var(--Size-Button-large, 16px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 16px */
+
+      &-desktop {
+        display: none;
+        @media screen and (min-width: 1080px) {
+          display: block;
+        }
+      }
+
+      &-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: 1080px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-spacing-xl, 40px);
+    align-self: stretch;
+
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+    }
+
+    &-image {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      align-self: stretch;
+
+      @media screen and (min-width: 1080px) {
+        width: 100%;
+      }
+
+      & .tag {
+        color: var(--Brand-Magenta, #e6007e);
+
+        font-family: var(--Family-body, Roboto);
+        font-size: var(--Size-Medium, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+      & figure {
+        height: 257.25px;
+        align-self: stretch;
+        aspect-ratio: 4/3;
+        width: 100%;
+        background-color: lightgray;
+        background-size: cover no-repeat;
+
+        @media screen and (min-width: 1080px) {
+          height: 450px;
+          align-self: stretch;
+          aspect-ratio: 4/3;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--Spacing-spacing-lg, 24px);
+      align-self: stretch;
+
+      @media screen and (min-width: 1080px) {
+        width: 100%;
+        margin-top: 25px;
+        justify-content: space-between;
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--Spacing-spacing-lg, 24px);
+        align-self: stretch;
+
+        &-title {
+          color: var(--Text-text-primary, #0d1311);
+
+          /* Headings/H3 */
+          font-family: var(--Family-heading, Roboto);
+          font-size: var(--Size-H3, 28px);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%; /* 30.8px */
+        }
+
+        &-date {
+          display: flex;
+          align-items: center;
+          gap: var(--Spacing-spacing-xs, 8px);
+
+          color: var(--Text-text-secondary, #565a58);
+
+          /* UI/Small */
+          font-family: var(--Family-body, Roboto);
+          font-size: var(--Size-Small, 12px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 18px */
+        }
+
+        &-description {
+          color: var(--Text-text-secondary, #565a58);
+
+          /* Body/Standard */
+          font-family: var(--Family-body, Roboto);
+          font-size: var(--Size-Standard, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        align-items: flex-end;
+        gap: var(--Spacing-spacing-md, 16px);
+        align-self: stretch;
+
+        &-btn {
+          padding: var(--Buttons-large-top-bottom, 16px) var(--Buttons-large-sides, 24px);
+          text-decoration: none;
+        }
+
+        & .btn-one {
+          background-color: var(--Brand-Magenta, #e6007e);
+          color: var(--Buttons-Primary-btn-text-default, #fff);
+
+          /* Buttons/Large */
+          font-family: var(--Family-btn, Roboto);
+          font-size: var(--Size-Button-large, 16px);
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%; /* 16px */
+        }
+
+        & .btn-two {
+          border: 2px solid var(--Buttons-Secondary-btn-stroke-default, #e6007e);
+          color: var(--Buttons-Secondary-btn-text-default, #5c0032);
+
+          /* Buttons/Large */
+          font-family: var(--Family-btn, Roboto);
+          font-size: var(--Size-Button-large, 16px);
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%; /* 16px */
+        }
+      }
+    }
+  }
+
+  &-short-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-spacing-lg, 24px);
+    align-self: stretch;
+
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+      margin-top: var(--Spacing-spacing-xl, 40px);
+      gap: var(--Spacing-spacing-xl, 40px);
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--Spacing-spacing-xxs, 4px);
+      align-self: stretch;
+
+      & .tag {
+        color: var(--Text-text-heading-alt, #e6007e);
+
+        /* UI/Medium standard */
+        font-family: var(--Family-body, Roboto);
+        font-size: var(--Size-Medium, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+      }
+
+      &-wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: var(--Spacing-spacing-md, 16px);
+        align-self: stretch;
+
+        & figure {
+          width: 128px;
+          height: 112px;
+          aspect-ratio: 8/7;
+          background: lightgray 50% / cover no-repeat;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          gap: var(--Spacing-spacing-md, 16px);
+          flex: 1 0 0;
+
+          &-title {
+            color: var(--Text-text-primary, #0d1311);
+
+            /* Headings/H6 */
+            font-family: var(--Family-heading, Roboto);
+            font-size: var(--Size-H6, 16px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 19.2px */
+          }
+
+          &-meta {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--Spacing-spacing-md, 16px);
+            align-self: stretch;
+
+            &-date,
+            &-time {
+              display: flex;
+              align-items: center;
+              gap: var(--Spacing-spacing-xs, 8px);
+              color: var(--Text-text-secondary, #565a58);
+
+              /* UI/Small */
+              font-family: var(--Family-body, Roboto);
+              font-size: var(--Size-Small, 12px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%; /* 18px */
+            }
+          }
+        }
+      }
+    }
+  }
+}
