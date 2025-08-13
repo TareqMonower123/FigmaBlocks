@@ -75,7 +75,19 @@ body {
     display: none;
   }
 }
-.wak-events-article {
+.wak-events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-spacing-lg, 24px);
+  align-self: stretch;
+}
+@media screen and (min-width: 1080px) {
+  .wak-events-container {
+    gap: var(--Spacing-spacing-xl, 40px);
+  }
+}
+.wak-events-container-article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -83,11 +95,11 @@ body {
   align-self: stretch;
 }
 @media screen and (min-width: 1080px) {
-  .wak-events-article {
+  .wak-events-container-article {
     flex-direction: row;
   }
 }
-.wak-events-article-image {
+.wak-events-container-article-image {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -95,11 +107,11 @@ body {
   align-self: stretch;
 }
 @media screen and (min-width: 1080px) {
-  .wak-events-article-image {
+  .wak-events-container-article-image {
     width: 100%;
   }
 }
-.wak-events-article-image .tag {
+.wak-events-container-article-image .tag {
   color: var(--Brand-Magenta, #e6007e);
   font-family: var(--Family-body, Roboto);
   font-size: var(--Size-Medium, 14px);
@@ -107,7 +119,7 @@ body {
   font-weight: 400;
   line-height: 150%;
 }
-.wak-events-article-image figure {
+.wak-events-container-article-image picture {
   height: 257.25px;
   align-self: stretch;
   aspect-ratio: 4/3;
@@ -116,18 +128,18 @@ body {
   background-size: cover no-repeat;
 }
 @media screen and (min-width: 1080px) {
-  .wak-events-article-image figure {
+  .wak-events-container-article-image picture {
     height: 450px;
     align-self: stretch;
     aspect-ratio: 4/3;
   }
 }
-.wak-events-article-image figure img {
+.wak-events-container-article-image picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.wak-events-article-wrapper {
+.wak-events-container-article-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -135,20 +147,20 @@ body {
   align-self: stretch;
 }
 @media screen and (min-width: 1080px) {
-  .wak-events-article-wrapper {
+  .wak-events-container-article-wrapper {
     width: 100%;
     margin-top: 25px;
     justify-content: space-between;
   }
 }
-.wak-events-article-wrapper-content {
+.wak-events-container-article-wrapper-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Spacing-spacing-lg, 24px);
   align-self: stretch;
 }
-.wak-events-article-wrapper-content-title {
+.wak-events-container-article-wrapper-content-title {
   color: var(--Text-text-primary, #0d1311);
   /* Headings/H3 */
   font-family: var(--Family-heading, Roboto);
@@ -157,7 +169,7 @@ body {
   font-weight: 700;
   line-height: 110%; /* 30.8px */
 }
-.wak-events-article-wrapper-content-date {
+.wak-events-container-article-wrapper-content-date {
   display: flex;
   align-items: center;
   gap: var(--Spacing-spacing-xs, 8px);
@@ -169,7 +181,7 @@ body {
   font-weight: 400;
   line-height: 150%; /* 18px */
 }
-.wak-events-article-wrapper-content-description {
+.wak-events-container-article-wrapper-content-description {
   color: var(--Text-text-secondary, #565a58);
   /* Body/Standard */
   font-family: var(--Family-body, Roboto);
@@ -178,17 +190,18 @@ body {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-.wak-events-article-wrapper-buttons {
+.wak-events-container-article-wrapper-buttons {
   display: flex;
   align-items: flex-end;
   gap: var(--Spacing-spacing-md, 16px);
   align-self: stretch;
 }
-.wak-events-article-wrapper-buttons-btn {
+.wak-events-container-article-wrapper-buttons-btn {
   padding: var(--Buttons-large-top-bottom, 16px) var(--Buttons-large-sides, 24px);
   text-decoration: none;
+  border: 2px solid var(--Buttons-Secondary-btn-stroke-default, #e6007e);
 }
-.wak-events-article-wrapper-buttons .btn-one {
+.wak-events-container-article-wrapper-buttons .btn-one {
   background-color: var(--Brand-Magenta, #e6007e);
   color: var(--Buttons-Primary-btn-text-default, #fff);
   /* Buttons/Large */
@@ -198,8 +211,7 @@ body {
   font-weight: 600;
   line-height: 100%; /* 16px */
 }
-.wak-events-article-wrapper-buttons .btn-two {
-  border: 2px solid var(--Buttons-Secondary-btn-stroke-default, #e6007e);
+.wak-events-container-article-wrapper-buttons .btn-two {
   color: var(--Buttons-Secondary-btn-text-default, #5c0032);
   /* Buttons/Large */
   font-family: var(--Family-btn, Roboto);
@@ -208,28 +220,37 @@ body {
   font-weight: 600;
   line-height: 100%; /* 16px */
 }
-.wak-events-short-article {
+.wak-events-container-divider {
+  background: var(--Divider-divider, #facce5);
+  height: 1px;
+  width: 100%;
+  border: none;
+}
+.wak-events-container-short-article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Spacing-spacing-lg, 24px);
   align-self: stretch;
+  padding-bottom: var(--Spacing-spacing-lg, 24px);
+  border-bottom: 1px solid var(--Divider-divider, #facce5);
 }
 @media screen and (min-width: 1080px) {
-  .wak-events-short-article {
+  .wak-events-container-short-article {
     flex-direction: row;
-    margin-top: var(--Spacing-spacing-xl, 40px);
     gap: var(--Spacing-spacing-xl, 40px);
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
-.wak-events-short-article-card {
+.wak-events-container-short-article-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Spacing-spacing-xxs, 4px);
   align-self: stretch;
 }
-.wak-events-short-article-card .tag {
+.wak-events-container-short-article-card .tag {
   color: var(--Text-text-heading-alt, #e6007e);
   /* UI/Medium standard */
   font-family: var(--Family-body, Roboto);
@@ -238,24 +259,24 @@ body {
   font-weight: 400;
   line-height: 150%; /* 21px */
 }
-.wak-events-short-article-card-wrapper {
+.wak-events-container-short-article-card-wrapper {
   display: flex;
   align-items: flex-end;
   gap: var(--Spacing-spacing-md, 16px);
   align-self: stretch;
 }
-.wak-events-short-article-card-wrapper figure {
+.wak-events-container-short-article-card-wrapper picture {
   width: 128px;
   height: 112px;
   aspect-ratio: 8/7;
   background: lightgray 50%/cover no-repeat;
 }
-.wak-events-short-article-card-wrapper figure img {
+.wak-events-container-short-article-card-wrapper picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.wak-events-short-article-card-wrapper-content {
+.wak-events-container-short-article-card-wrapper-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -263,7 +284,7 @@ body {
   gap: var(--Spacing-spacing-md, 16px);
   flex: 1 0 0;
 }
-.wak-events-short-article-card-wrapper-content-title {
+.wak-events-container-short-article-card-wrapper-content-title {
   color: var(--Text-text-primary, #0d1311);
   /* Headings/H6 */
   font-family: var(--Family-heading, Roboto);
@@ -272,13 +293,13 @@ body {
   font-weight: 700;
   line-height: 120%; /* 19.2px */
 }
-.wak-events-short-article-card-wrapper-content-meta {
+.wak-events-container-short-article-card-wrapper-content-meta {
   display: flex;
   align-items: flex-start;
   gap: var(--Spacing-spacing-md, 16px);
   align-self: stretch;
 }
-.wak-events-short-article-card-wrapper-content-meta-date, .wak-events-short-article-card-wrapper-content-meta-time {
+.wak-events-container-short-article-card-wrapper-content-meta-date, .wak-events-container-short-article-card-wrapper-content-meta-time {
   display: flex;
   align-items: center;
   gap: var(--Spacing-spacing-xs, 8px);
