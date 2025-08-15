@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- news listing -->
+    <div class="wak-news-listing">
+      <!-- filter -->
+      <div class="wak-news-listing-filter">
+        <div class="wak-news-listing-filter-wrapper">
+          <!-- inputs -->
+          <div class="wak-news-listing-filter-wrapper-inputs">
+            <!-- Topic -->
+            <div class="wak-news-listing-filter-wrapper-input" data-filter-key="topic">
+              <!-- label -->
+              <span class="label">Topic</span>
+              <div class="select-box" data-placeholder="Select topic">
+                <span class="selected">Select topic</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="down-arrow"
+                >
+                  <path
+                    d="M11.9999 16.3537L6.34619 10.7L7.39994 9.64624L11.9999 14.2462L16.5999 9.64624L17.6537 10.7L11.9999 16.3537Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <!-- options -->
+              <div class="options checkbox-options">
+                <label>
+                  <input type="checkbox" value="development" />
+                  <span class="custom-checkbox"></span>
+                  Development
+                </label>
+                <label>
+                  <input type="checkbox" value="development" />
+                  <span class="custom-checkbox"></span>
+                  Development
+                </label>
+                <label>
+                  <input type="checkbox" value="marketing" />
+                  <span class="custom-checkbox"></span>
+                  Marketing
+                </label>
+              </div>
+            </div>
+            <!-- type -->
+            <div class="wak-news-listing-filter-wrapper-input" data-filter-key="type">
+              <!-- label -->
+              <span class="label">Type</span>
+              <div class="select-box" data-placeholder="Select type">
+                <span class="selected">Select type</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="down-arrow"
+                >
+                  <path
+                    d="M11.9999 16.3537L6.34619 10.7L7.39994 9.64624L11.9999 14.2462L16.5999 9.64624L17.6537 10.7L11.9999 16.3537Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <!-- options -->
+              <div class="options checkbox-options">
+                <label>
+                  <input type="checkbox" value="development" />
+                  <span class="custom-checkbox"></span>
+                  Development
+                </label>
+                <label>
+                  <input type="checkbox" value="blog" />
+                  <span class="custom-checkbox"></span>
+                  Blog
+                </label>
+                <label>
+                  <input type="checkbox" value="marketing" />
+                  <span class="custom-checkbox"></span>
+                  Marketing
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- buttons -->
+          <button class="wak-news-listing-filter-wrapper-button">Clear Filter</button>
+        </div>
+        <!-- filter items -->
+        <div class="wak-news-listing-filter-items">
+          <!-- tag 1 -->
+          <div class="wak-news-listing-filter-items-tag" data-key="topic" data-value="development">
+            <span>development</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="remove-tag"
+            >
+              <path
+                d="M4.80008 13.9903L4.00977 13.2L8.20977 8.99996L4.00977 4.79996L4.80008 4.00964L9.00008 8.20964L13.2001 4.00964L13.9904 4.79996L9.79039 8.99996L13.9904 13.2L13.2001 13.9903L9.00008 9.79027L4.80008 13.9903Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <!-- tag 2 -->
+          <div class="wak-news-listing-filter-items-tag" data-key="type" data-value="blog">
+            <span>blog</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="remove-tag"
+            >
+              <path
+                d="M4.80008 13.9903L4.00977 13.2L8.20977 8.99996L4.00977 4.79996L4.80008 4.00964L9.00008 8.20964L13.2001 4.00964L13.9904 4.79996L9.79039 8.99996L13.9904 13.2L13.2001 13.9903L9.00008 9.79027L4.80008 13.9903Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- news listing -->
+      <div class="wak-news-listing-cards">
+        <!-- row 1 -->
+        <div class="wak-news-listing-cards-row">
+          <!-- news card 1-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- news card 2-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- advertisement -->
+          <div class="wak-news-listing-cards-row-column-advertisement">
+            <div class="wak-news-listing-cards-row-column-advertisement-content"></div>
+          </div>
+        </div>
+
+        <!-- row 2 -->
+        <div class="wak-news-listing-cards-row">
+          <!-- news card 1-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- news card 2-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- news card 3-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- row 3/ Advertisement -->
+
+        <div class="wak-news-listing-cards-row wak-news-listing-cards-row-advertisement">
+          <!-- advertisement -->
+          <div class="wak-news-listing-cards-row-advertisement-content"></div>
+        </div>
+
+        <!-- row 4 -->
+        <div class="wak-news-listing-cards-row">
+          <!-- news card 1-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- news card 2-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+
+          <!-- news card 3-->
+          <div class="wak-news-listing-cards-row-card">
+            <!-- media -->
+            <div class="wak-news-listing-cards-row-card-media">
+              <!-- tag -->
+              <span class="wak-tag">topic</span>
+              <!-- image -->
+              <picture class="wak-news-listing-cards-row-card-media-img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg"
+                  alt="image"
+                />
+              </picture>
+            </div>
+
+            <!-- content -->
+            <div class="wak-news-listing-cards-row-card-content">
+              <!-- title -->
+              <h4 class="wak-news-listing-cards-row-card-content-title wak-h4">
+                Title goes here lorem ipsu dolor sit amet consectetur. Id vitae nullam non augue.
+              </h4>
+
+              <!-- details -->
+              <div class="wak-news-listing-cards-row-card-content-details">
+                <!-- date -->
+                <div class="wak-news-listing-cards-row-card-content-details-date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.53842 14.8385C3.20164 14.8385 2.91659 14.7218 2.68325 14.4885C2.44992 14.2551 2.33325 13.9701 2.33325 13.6333V4.7103C2.33325 4.37353 2.44992 4.08847 2.68325 3.85514C2.91659 3.6218 3.20164 3.50514 3.53842 3.50514H4.46142V2.09497H5.48709V3.50514H10.5384V2.09497H11.5384V3.50514H12.4614C12.7982 3.50514 13.0833 3.6218 13.3166 3.85514C13.5499 4.08847 13.6666 4.37353 13.6666 4.7103V13.6333C13.6666 13.9701 13.5499 14.2551 13.3166 14.4885C13.0833 14.7218 12.7982 14.8385 12.4614 14.8385H3.53842ZM3.53842 13.8385H12.4614C12.5128 13.8385 12.5598 13.8171 12.6024 13.7743C12.6452 13.7316 12.6666 13.6846 12.6666 13.6333V7.37697H3.33325V13.6333C3.33325 13.6846 3.35464 13.7316 3.39742 13.7743C3.44009 13.8171 3.48709 13.8385 3.53842 13.8385ZM3.33325 6.37697H12.6666V4.7103C12.6666 4.65897 12.6452 4.61197 12.6024 4.5693C12.5598 4.52653 12.5128 4.50514 12.4614 4.50514H3.53842C3.48709 4.50514 3.44009 4.52653 3.39742 4.5693C3.35464 4.61197 3.33325 4.65897 3.33325 4.7103V6.37697Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-date-text">Date</span>
+                </div>
+                <!-- time -->
+                <div class="wak-news-listing-cards-row-card-content-details-time">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3154 11.818L11.0181 11.1153L8.50008 8.59734V5.46667H7.50008V9.00251L10.3154 11.818ZM8.00125 15.1333C7.12525 15.1333 6.30186 14.9671 5.53108 14.6347C4.7603 14.3022 4.08986 13.8511 3.51975 13.2812C2.94964 12.7113 2.49825 12.0411 2.16558 11.2707C1.83303 10.5002 1.66675 9.67706 1.66675 8.80117C1.66675 7.92517 1.83297 7.10179 2.16541 6.33101C2.49786 5.56023 2.94903 4.88979 3.51891 4.31967C4.0888 3.74956 4.75897 3.29817 5.52941 2.96551C6.29986 2.63295 7.12303 2.46667 7.99891 2.46667C8.87491 2.46667 9.6983 2.6329 10.4691 2.96534C11.2399 3.29779 11.9103 3.74895 12.4804 4.31884C13.0505 4.88873 13.5019 5.5589 13.8346 6.32934C14.1671 7.09979 14.3334 7.92295 14.3334 8.79884C14.3334 9.67484 14.1672 10.4982 13.8347 11.269C13.5023 12.0398 13.0511 12.7102 12.4812 13.2803C11.9114 13.8505 11.2412 14.3018 10.4707 14.6345C9.7003 14.9671 8.87714 15.1333 8.00125 15.1333ZM8.00008 14.1333C9.47786 14.1333 10.7362 13.6139 11.7751 12.575C12.814 11.5361 13.3334 10.2778 13.3334 8.80001C13.3334 7.32223 12.814 6.0639 11.7751 5.02501C10.7362 3.98612 9.47786 3.46667 8.00008 3.46667C6.5223 3.46667 5.26397 3.98612 4.22508 5.02501C3.18619 6.0639 2.66675 7.32223 2.66675 8.80001C2.66675 10.2778 3.18619 11.5361 4.22508 12.575C5.26397 13.6139 6.5223 14.1333 8.00008 14.1333Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="wak-news-listing-card-details-time-text">Time</span>
+                </div>
+              </div>
+
+              <!-- paragraph -->
+              <p class="wak-news-listing-cards-row-card-content-description">
+                Lorem ipsum dolor sit amet consectetur. Interdum volutpat dapibus odio placerat
+                vulputate ut vel. Mauris at quam ut facilisis eu sed consectetur. Dictum ullamcorper
+                adipiscing varius nibh in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pagination -->
+
+      <div class="wak-news-listing-pagination">
+        <!-- prev -->
+        <!-- desktop -->
+        <a href="#" class="wak-news-listing-pagination-prev btn-pagination-desktop">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="21"
+            viewBox="0 0 20 21"
+            fill="none"
+          >
+            <path
+              d="M8.46146 15.5113L9.33979 14.6075L6.15708 11.4248H16.25V10.1748H6.15708L9.33979 6.99213L8.46146 6.08838L3.75 10.7998L8.46146 15.5113Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span>prev</span>
+        </a>
+
+        <!-- mobile -->
+        <a href="#" class="wak-news-listing-pagination-prev btn-pagination-mobile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="33"
+            viewBox="0 0 32 33"
+            fill="none"
+          >
+            <path
+              d="M15.5599 9.66048C15.5598 11.0164 14.9898 12.1903 14.2604 13.137C13.7042 13.859 13.0243 14.4906 12.3385 15.0264L26.2813 15.0264L26.2813 17.5602L11.7708 17.5602C12.6311 18.2264 13.5368 19.0233 14.2396 19.8857C14.9223 20.7238 15.5599 21.8002 15.5599 22.9938L15.5599 24.2607L13.0273 24.2607L13.0273 22.9938C13.0273 22.6801 12.8354 22.1742 12.2747 21.486C11.7392 20.8287 10.994 20.1606 10.2018 19.5485C9.41732 18.9423 8.62695 18.4202 8.02865 18.0485C7.73063 17.8634 7.48256 17.7178 7.3112 17.6188C7.2259 17.5695 7.15993 17.5315 7.11589 17.5068C7.09386 17.4945 7.07682 17.4852 7.06641 17.4795C7.06141 17.4767 7.05814 17.4742 7.05599 17.473L7.05339 17.473L6.94271 17.4053C6.86295 17.3506 6.79254 17.2866 6.72917 17.2178C6.48184 16.9866 6.32683 16.6585 6.32682 16.2933C6.32682 15.68 6.76227 15.1692 7.34115 15.0524C7.36732 15.041 7.39633 15.0277 7.42839 15.0133C7.59434 14.9392 7.83637 14.8279 8.1276 14.6813C8.71317 14.3865 9.48483 13.9584 10.2487 13.4222C11.0193 12.8812 11.7383 12.2607 12.2539 11.5915C12.768 10.9242 13.0272 10.2807 13.0273 9.66048L13.0273 8.39355L15.5599 8.39355L15.5599 9.66048Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+
+        <!-- number -->
+        <div class="wak-news-listing-pagination-numbers">
+          <span class="wak-news-listing-pagination-number active">1</span>
+          <span class="wak-news-listing-pagination-number">2</span>
+          <span class="wak-news-listing-pagination-more">...</span>
+          <span class="wak-news-listing-pagination-number">8</span>
+        </div>
+
+        <!-- next -->
+        <!-- desktop -->
+        <a href="#" class="wak-news-listing-pagination-next btn-pagination-desktop">
+          <span>next</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="21"
+            viewBox="0 0 20 21"
+            fill="none"
+          >
+            <path
+              d="M11.5385 15.5113L10.6602 14.6075L13.8429 11.4248H3.75V10.1748H13.8429L10.6602 6.99213L11.5385 6.08838L16.25 10.7998L11.5385 15.5113Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+        <!-- mobile -->
+        <a href="#" class="wak-news-listing-pagination-next btn-pagination-mobile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="33"
+            viewBox="0 0 32 33"
+            fill="none"
+          >
+            <path
+              d="M17.0475 22.9938C17.0476 21.6379 17.6176 20.464 18.347 19.5173C18.9032 18.7953 19.5832 18.1637 20.2689 17.6279H6.32617V15.0941L20.8366 15.0941C19.9764 14.4279 19.0706 13.631 18.3678 12.7686C17.6851 11.9305 17.0475 10.8541 17.0475 9.66048V8.39355H19.5801V9.66048C19.5801 9.97421 19.772 10.4801 20.3327 11.1683C20.8682 11.8255 21.6135 12.4937 22.4056 13.1058C23.1901 13.712 23.9805 14.2341 24.5788 14.6058C24.8768 14.7909 25.1249 14.9365 25.2962 15.0355C25.3815 15.0848 25.4475 15.1228 25.4915 15.1475C25.5136 15.1598 25.5306 15.1691 25.541 15.1748C25.546 15.1776 25.5493 15.1801 25.5514 15.1813H25.554L25.6647 15.249C25.7445 15.3037 25.8149 15.3677 25.8783 15.4365C26.1256 15.6677 26.2806 15.9958 26.2806 16.361C26.2806 16.9743 25.8452 17.4851 25.2663 17.6019C25.2401 17.6133 25.2111 17.6266 25.179 17.641C25.0131 17.7151 24.7711 17.8264 24.4798 17.973C23.8943 18.2678 23.1226 18.6959 22.3587 19.2321C21.5881 19.7731 20.8691 20.3936 20.3535 21.0628C19.8394 21.7301 19.5802 22.3736 19.5801 22.9938V24.2607H17.0475V22.9938Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
