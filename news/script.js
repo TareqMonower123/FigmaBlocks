@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  
   const $button = $(".wak-news-listing-filter-wrapper-button");
   const $inputs = $(".wak-news-listing-filter-wrapper-input");
   const filterQuery = {};
